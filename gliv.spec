@@ -21,9 +21,15 @@ convert it to PNG. GLiv is very fast and smooth at rotating, panning
 and zooming if you have an OpenGL accelerated board.
 
 %description -l pl
-GLiv jest bazujacym na OpenGl przegl±dark± plików graficznych.
-Gliv dziala bardzo szybko jezeli masz akselerator sprzetowy OpenGl.
 
++Gliv jest przegladarka na OpenGl'u obrazow, ladowanie obrazu odbywa 
+sie poprzez Gdk-pixbuf (samodzielny lub zwiazany z GTK+-2), 
+renderowanie poprzez OpenGL i interfejs graficzny uzytkownika uzywa 
+GTK+ z GtkGLArea jesli Gtk-pixbuf nie moze zaladowac obrazka, wywoluje 
+ImageMagick aby dokonac jego konwersji na format PNG.
+GLiv jest bardzo szybki, plynnie wykonuje rotacje, przesuwaniu aktualnie 
+wizualizowanego framgmentu w oknie, powiekszaniu i zmniejszaniu 
+jesli posiadasz akcelerator.
 
 %prep
 %setup -q
