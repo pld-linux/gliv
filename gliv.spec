@@ -1,7 +1,7 @@
 Summary:	Graphics file browser utility
 Summary(pl):	Narzêdzie do przegl±dania plików graficznych przy pomocy OpenGL
 Name:		gliv
-Version:	1.5.2
+Version:	1.7.1
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
@@ -37,7 +37,7 @@ posiadasz akcelerator.
 
 %prep
 %setup -q
-%patch0 -p1
+#%patch0 -p1
 
 %build
 rm -f missing
@@ -53,10 +53,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
+%find_lang %{name}
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files
+%files -f %{name}.lang
 %defattr(644,root,root,755)
 %doc README NEWS THANKS
 %attr(755,root,root) %{_bindir}/%{name}
