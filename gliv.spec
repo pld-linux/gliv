@@ -1,4 +1,5 @@
 Summary:	Graphics file browser utility.
+Summary(pl):	Narzêdzie do przegl±dania plików graficznych przy pomocy OpenGl  
 Name:		gliv
 Version:	1.5.1
 Release:	1
@@ -19,6 +20,11 @@ widget. If Gdk-pixbuf cannot load your image, it uses ImageMagick to
 convert it to PNG. GLiv is very fast and smooth at rotating, panning
 and zooming if you have an OpenGL accelerated board.
 
+%description -l pl
+GLiv jest bazujacym na OpenGl przegl±dark± plików graficznych.
+Gliv dziala bardzo szybko jezeli masz akselerator sprzetowy OpenGl.
+
+
 %prep
 %setup -q
 
@@ -30,7 +36,7 @@ and zooming if you have an OpenGL accelerated board.
 rm -rf $RPM_BUILD_ROOT
 rm -rf
 
-%{__make} install prefix=$RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf
