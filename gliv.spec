@@ -7,7 +7,11 @@ License:	GPL
 Group:		X11/Applications/Multimedia
 Vendor:		Guillaume Chazarain <booh@altern.org>
 Source0:	http://gliv.tuxfamily.org/%{name}-%{version}.tar.bz2
+Patch0:		%{name}-AM_INIT_AUTOMAKE.patch
 URL:		http://gliv.tuxfamily.org/
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2
 BuildRequires:	gtkglarea-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -35,8 +39,14 @@ posiadasz akcelerator.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+rm -f missing
+gettextize --copy --force
+aclocal
+autoconf
+automake -a -c -f
 %configure
 %{__make}
 
