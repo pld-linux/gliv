@@ -7,6 +7,7 @@ License:	GPL
 Group:		X11/Applications/Multimedia
 Vendor:		Guillaume Chazarain <booh@altern.org>
 Source0:	http://gliv.tuxfamily.org/%{name}-%{version}.tar.bz2
+# Source0-md5:	a8c06551a6830d994442bec4220a153e
 URL:		http://gliv.tuxfamily.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
