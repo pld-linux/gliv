@@ -13,6 +13,7 @@ BuildRequires:	automake
 BuildRequires:	gettext-devel
 BuildRequires:	gtk+-devel >= 1.2
 BuildRequires:	gtkglarea-devel
+BuildREquires:	gtkglext-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
