@@ -26,13 +26,13 @@ convert it to PNG. GLiv is very fast and smooth at rotating, panning
 and zooming if you have an OpenGL accelerated board.
 
 %description -l pl
-Gliv jest przegladark± obrazków u¿ywaj±c± OpenGL; ³adowanie obrazka
+Gliv jest przegl±dark± obrazków u¿ywaj±c± OpenGL; ³adowanie obrazka
 odbywa siê poprzez Gdk-pixbuf (samodzielny lub zwi±zany z GTK+-2),
 renderowanie poprzez OpenGL, a interfejs graficzny u¿ytkownika u¿ywa
 GTK+ z GtkGLArea. Je¶li Gtk-pixbuf nie mo¿e za³adowaæ obrazka,
 wywo³uje ImageMagick aby dokonaæ jego konwersji na format PNG. GLiv
 jest bardzo szybki, p³ynnie wykonuje rotacje, przesuwa aktualnie
-wizualizowany framgment w oknie, powiêkszanie i zmniejszanie - je¶li
+wizualizowany fragment w oknie, powiêkszanie i zmniejszanie - je¶li
 posiadasz akcelerator.
 
 %prep
@@ -50,7 +50,8 @@ rm -f missing
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %find_lang %{name}
 
