@@ -10,7 +10,7 @@ Source0:	http://guichaz.free.fr/gliv/%{name}-%{version}.tar.bz2
 # Source0-md5:	2ad963118f2f373e6b53f8cb247a9dcc
 URL:		http://guichaz.free.fr/gliv/
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2.2.0
+BuildRequires:	gtk+2-devel >= 2:2.2.0
 BuildRequires:	gtkglext-devel >= 1.0.0
 BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
