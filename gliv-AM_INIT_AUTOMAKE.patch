@@ -1,0 +1,24 @@
+--- gliv-1.5.1/configure.ac~	Thu Apr 25 16:58:15 2002
++++ gliv-1.5.1/configure.ac	Thu Apr 25 16:58:15 2002
+@@ -1,7 +1,7 @@
+ # Process this file with autoconf to produce a configure script.
+ AC_INIT([gliv], esyscmd([echo -n $(head -n 1 NEWS)]))
+ AC_CONFIG_SRCDIR([src/gliv.c])
+-AM_INIT_AUTOMAKE
++AM_INIT_AUTOMAKE(gliv,1.5.1)
+ AM_CONFIG_HEADER([config.h])
+ 
+ 
+@@ -10,12 +10,6 @@
+ AC_PROG_RANLIB
+ 
+ 
+-# Defaults compile flags.
+-if test "x$GCC" = "xyes" && test "x$ac_test_CFLAGS" = "x"; then
+-  CFLAGS="-Wall -pipe -O3 -fomit-frame-pointer -ffast-math"
+-fi
+-
+-
+ # Checks for libm.
+ AC_CHECK_LIB([m], [atan2], [
+   LDFLAGS="-lm $LDFLAGS"
