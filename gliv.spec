@@ -45,8 +45,8 @@ posiadasz akcelerator.
 rm -f missing
 gettextize --copy --force
 aclocal
-autoconf
-automake -a -c -f
+%{__autoconf}
+%{__automake}
 %configure
 %{__make}
 
