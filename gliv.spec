@@ -12,8 +12,8 @@ URL:		http://gliv.tuxfamily.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
-BuildRequires:	gtk+-devel >= 1.2
-BuildRequires:	gtkglext-devel >= 0.7.0
+BuildRequires:	gtk+2-devel >= 2.2.0
+BuildRequires:	gtkglext-devel >= 1.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 
