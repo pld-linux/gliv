@@ -9,6 +9,7 @@ Vendor:		Guillaume Chazarain <booh@altern.org>
 Source0:	http://gliv.tuxfamily.org/%{name}-%{version}.tar.bz2
 # Source0-md5:	75c516fc04426e88231b07fcd66d063e
 URL:		http://gliv.tuxfamily.org/
+BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.2.0
 BuildRequires:	gtkglext-devel >= 1.0.0
 BuildRequires:	pkgconfig
@@ -38,6 +39,7 @@ posiadasz akcelerator.
 %setup -q
 
 %build
+cp -f /usr/share/automake/config.* .
 %configure
 %{__make}
 
