@@ -1,21 +1,20 @@
 Summary:	Graphics file browser utility
 Summary(pl):	Narzêdzie do przegl±dania plików graficznych przy pomocy OpenGL
 Name:		gliv
-Version:	1.7.1
+Version:	1.8
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Vendor:		Guillaume Chazarain <booh@altern.org>
 Source0:	http://gliv.tuxfamily.org/%{name}-%{version}.tar.bz2
-# Source0-md5:	a8c06551a6830d994442bec4220a153e
+# Source0-md5:	75c516fc04426e88231b07fcd66d063e
 URL:		http://gliv.tuxfamily.org/
-BuildRequires:	autoconf
-BuildRequires:	automake
-BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel >= 2.2.0
 BuildRequires:	gtkglext-devel >= 1.0.0
+BuildRequires:	pkgconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%define		_noautoreqdep	libGL.so.1 libGLU.so.1
 
 %description
 GLiv is an OpenGL image viewer, image loading is done through
@@ -39,11 +38,6 @@ posiadasz akcelerator.
 %setup -q
 
 %build
-rm -f missing
-%{__gettextize}
-%{__aclocal}
-%{__autoconf}
-%{__automake}
 %configure
 %{__make}
 
