@@ -44,7 +44,7 @@ posiadasz akcelerator.
 %build
 rm -f missing
 %{__gettextize}
-aclocal
+%{__aclocal}
 %{__autoconf}
 %{__automake}
 %configure
