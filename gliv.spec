@@ -1,5 +1,5 @@
 Summary:	Graphics file browser utility
-Summary(pl):	Narzêdzie do przegl±dania plików graficznych przy pomocy OpenGL
+Summary(pl.UTF-8):   NarzÄ™dzie do przeglÄ…dania plikÃ³w graficznych przy pomocy OpenGL
 Name:		gliv
 Version:	1.9.3
 Release:	1
@@ -25,14 +25,14 @@ widget. If Gdk-pixbuf cannot load your image, it uses ImageMagick to
 convert it to PNG. GLiv is very fast and smooth at rotating, panning
 and zooming if you have an OpenGL accelerated board.
 
-%description -l pl
-Gliv jest przegl±dark± obrazków u¿ywaj±c± OpenGL; ³adowanie obrazka
-odbywa siê poprzez Gdk-pixbuf (samodzielny lub zwi±zany z GTK+-2),
-renderowanie poprzez OpenGL, a interfejs graficzny u¿ytkownika u¿ywa
-GTK+ z GtkGLArea. Je¶li Gtk-pixbuf nie mo¿e za³adowaæ obrazka,
-wywo³uje ImageMagick aby dokonaæ jego konwersji na format PNG. GLiv
-jest bardzo szybki, p³ynnie wykonuje rotacje, przesuwa aktualnie
-wizualizowany fragment w oknie, powiêkszanie i zmniejszanie - je¶li
+%description -l pl.UTF-8
+Gliv jest przeglÄ…darkÄ… obrazkÃ³w uÅ¼ywajÄ…cÄ… OpenGL; Å‚adowanie obrazka
+odbywa siÄ™ poprzez Gdk-pixbuf (samodzielny lub zwiÄ…zany z GTK+-2),
+renderowanie poprzez OpenGL, a interfejs graficzny uÅ¼ytkownika uÅ¼ywa
+GTK+ z GtkGLArea. JeÅ›li Gtk-pixbuf nie moÅ¼e zaÅ‚adowaÄ‡ obrazka,
+wywoÅ‚uje ImageMagick aby dokonaÄ‡ jego konwersji na format PNG. GLiv
+jest bardzo szybki, pÅ‚ynnie wykonuje rotacje, przesuwa aktualnie
+wizualizowany fragment w oknie, powiÄ™kszanie i zmniejszanie - jeÅ›li
 posiadasz akcelerator.
 
 %prep
