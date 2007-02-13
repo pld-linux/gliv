@@ -1,5 +1,5 @@
 Summary:	Graphics file browser utility
-Summary(pl.UTF-8):   Narzędzie do przeglądania plików graficznych przy pomocy OpenGL
+Summary(pl.UTF-8):	Narzędzie do przeglądania plików graficznych przy pomocy OpenGL
 Name:		gliv
 Version:	1.9.3
 Release:	1
