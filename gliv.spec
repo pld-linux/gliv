@@ -1,13 +1,13 @@
 Summary:	Graphics file browser utility
 Summary(pl.UTF-8):	Narzędzie do przeglądania plików graficznych przy pomocy OpenGL
 Name:		gliv
-Version:	1.9.3
+Version:	1.9.6
 Release:	1
 License:	GPL
 Group:		X11/Applications/Multimedia
 Vendor:		Guillaume Chazarain <booh@altern.org>
-Source0:	http://guichaz.free.fr/gliv/%{name}-%{version}.tar.bz2
-# Source0-md5:	3840a547cdc679c5a592d30040b9f6b5
+Source0:	http://guichaz.free.fr/gliv/files/%{name}-%{version}.tar.bz2
+# Source0-md5:	e51838ed643f3af5143a20a12f432b9d
 URL:		http://guichaz.free.fr/gliv/
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2:2.4.0
