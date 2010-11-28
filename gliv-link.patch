@@ -1,0 +1,37 @@
+--- gliv-1.9.7/configure.ac.orig	2010-11-07 20:22:01.000000000 +0100
++++ gliv-1.9.7/configure.ac	2010-11-28 21:53:19.778114393 +0100
+@@ -129,12 +129,12 @@
+ # Checks for X.
+ AC_PATH_XTRA
+ CFLAGS="$X_CFLAGS $CFLAGS"
+-LDFLAGS="$X_PRE_LIBS $X_LIBS -lX11 $X_EXTRA_LIBS $LDFLAGS"
++LIBS="$LIBS $X_LIBS -lX11 $X_EXTRA_LIBS"
+ 
+ # Checks for GtkGLExt.
+ PKG_CHECK_MODULES(GTKGLEXT, [gtkglext-1.0 >= 0.7.0])
+ CFLAGS="$GTKGLEXT_CFLAGS $CFLAGS"
+-LDFLAGS="$GTKGLEXT_LIBS $LDFLAGS"
++LIBS="$LIBS $GTKGLEXT_LIBS"
+ GTKGL_VERSION="$($PKG_CONFIG --modversion gtkglext-1.0)"
+ 
+ # Checks for OpenGL.
+@@ -145,8 +145,8 @@
+ 
+ if test "x$ogl" = "xno"; then
+  AC_MSG_NOTICE([maybe libGL requires libpthread...])
+- OLD_LDFLAGS="$LDFLAGS"
+- LDFLAGS="$LDFLAGS -lpthread"
++ OLD_LIBS="$LIBS"
++ LIBS="$LIBS -lpthread"
+  AC_TRY_LINK([#include "GL/gl.h"],
+              [glBegin(GL_QUADS);],
+              [],
+@@ -156,7 +156,7 @@
+ # Checks for gtk.
+ AM_PATH_GTK_2_0([2.6.0], [
+   CFLAGS="$GTK_CFLAGS $CFLAGS"
+-  LDFLAGS="$GTK_LIBS $LDFLAGS"
++  LIBS="$LIBS $GTK_LIBS"
+   GTK_VERSION="$($PKG_CONFIG --modversion gtk+-2.0)"
+  ], [exit 1], [gthread])
+ 
