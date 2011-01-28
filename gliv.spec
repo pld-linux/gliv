@@ -12,6 +12,7 @@ URL:		http://guichaz.free.fr/gliv/
 BuildRequires:	OpenGL-GLU-devel
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
+BuildRequires:	gettext-devel
 BuildRequires:	gtk+2-devel >= 2:2.6.0
 BuildRequires:	gtkglext-devel >= 1.0.0
 BuildRequires:	pkgconfig
